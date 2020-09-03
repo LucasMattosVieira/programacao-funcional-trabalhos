@@ -35,3 +35,25 @@ valor x (d,m,a) (dn,mn,an)
      | (a - an) < 11 || ((a - an) == 11 && (m - mn) < 0) || ((a - an) == 11 && (m - mn) == 0 && (d - dn) < 0) = (45*x)/100
      | (a - an) > 70 || ((a - an) == 70 && (m - mn) > 0) || ((a - an) == 70 && (m - mn) == 0 && (d - dn) >= 0) = (50*x)/100
      | otherwise = x
+
+{-
+    Questão 4
+-}
+
+gera1 :: [Int]
+gera1 = [ x^2 | x <- [1..15], odd x, x > 4, x < 14 ]
+
+gera2 :: [(Int,Int)]
+gera2 = [ (x,y) | x <- [1..15], x >= 1, x <= 4, y <- [x..(2*x)] ] 
+
+l1 :: [Int]
+l1 = [10..15]
+
+gera3 :: [Int]
+gera3 = [ x | y <- l1, x <- [1..15], x <= y ]
+
+gera4 :: [(Int,Int)]
+gera4 = [ (x,x+1) | x <- [1..15], odd x ]
+
+gera5 :: [Int]
+gera5 = [ fst(n) + y | n <- gera4, y <- [1..15], y == fst(n) + 1 ]
