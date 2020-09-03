@@ -82,10 +82,12 @@ contaNegM2 l = length [ x | x <- l, x < 0, mod x 2 == 0]
 listaNegM2 :: [Int] -> [Int]
 listaNegM2 l = [ x | x <- l, x < 0, mod x 2 == 0]
 
-
 {-
     Questão 6
 -}
+
+distancias :: [(Float,Float)] -> [Float]
+distancias l = [ (sqrt(x^2 + y^2)) | (x,y) <- l ]
 
 {-
     Questão 7
