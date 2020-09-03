@@ -27,3 +27,11 @@ equacao a b c
     Questão 3
 -}
 
+type Data = (Int,Int,Int)
+
+valor :: Float -> Data -> Data -> Float
+valor x (d,m,a) (dn,mn,an)
+     | (a - an) < 2 || ((a - an) == 2 && (m - mn) < 0) || ((a - an) == 2 && (m - mn) == 0 && (d - dn) < 0) = (15*x)/100
+     | (a - an) < 11 || ((a - an) == 11 && (m - mn) < 0) || ((a - an) == 11 && (m - mn) == 0 && (d - dn) < 0) = (45*x)/100
+     | (a - an) > 70 || ((a - an) == 70 && (m - mn) > 0) || ((a - an) == 70 && (m - mn) == 0 && (d - dn) >= 0) = (50*x)/100
+     | otherwise = x
