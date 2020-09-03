@@ -40,11 +40,17 @@ valor x (d,m,a) (dn,mn,an)
     Questão 4
 -}
 
+{- Letra A -}
+
 gera1 :: [Int]
 gera1 = [ x^2 | x <- [1..15], odd x, x > 4, x < 14 ]
 
+{- Letra B -}
+
 gera2 :: [(Int,Int)]
 gera2 = [ (x,y) | x <- [1..15], x >= 1, x <= 4, y <- [x..(2*x)] ] 
+
+{- Letra C -}
 
 l1 :: [Int]
 l1 = [10..15]
@@ -52,8 +58,12 @@ l1 = [10..15]
 gera3 :: [Int]
 gera3 = [ x | y <- l1, x <- [1..15], x <= y ]
 
+{- Letra D -}
+
 gera4 :: [(Int,Int)]
 gera4 = [ (x,x+1) | x <- [1..15], odd x ]
+
+{- Letra E -}
 
 gera5 :: [Int]
 gera5 = [ fst(n) + y | n <- gera4, y <- [1..15], y == fst(n) + 1 ]
@@ -62,8 +72,12 @@ gera5 = [ fst(n) + y | n <- gera4, y <- [1..15], y == fst(n) + 1 ]
     Questão 5
 -}
 
+{- Letra A -}
+
 contaNegM2 :: [Int] -> Int
 contaNegM2 l = length [ x | x <- l, x < 0, mod x 2 == 0]
+
+{- Letra B -}
 
 listaNegM2 :: [Int] -> [Int]
 listaNegM2 l = [ x | x <- l, x < 0, mod x 2 == 0]
