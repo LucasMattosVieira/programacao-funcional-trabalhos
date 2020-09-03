@@ -57,3 +57,74 @@ gera4 = [ (x,x+1) | x <- [1..15], odd x ]
 
 gera5 :: [Int]
 gera5 = [ fst(n) + y | n <- gera4, y <- [1..15], y == fst(n) + 1 ]
+
+{-
+    Questão 5
+-}
+
+contaNegM2 :: [Int] -> Int
+contaNegM2 l = length [ x | x <- l, x < 0, mod x 2 == 0]
+
+listaNegM2 :: [Int] -> [Int]
+listaNegM2 l = [ x | x <- l, x < 0, mod x 2 == 0]
+
+
+{-
+    Questão 6
+-}
+
+{-
+    Questão 7
+-}
+
+{-
+    Questão 8
+-}
+
+{-
+    Questão 9
+-}
+
+{-
+    Questão 10
+-}
+
+{-
+    Questão 11
+-}
+
+{-
+    Questão 12
+-}
+
+{-
+    Questão 13
+-}
+
+{-
+    Questão 14
+-}
+
+{-
+    Questão 15
+-}
+
+{-
+    Questão 16
+-}
+
+{-
+    Questão 17
+-}
+
+{-
+    Questão 18
+-}
+
+{-
+    Questão 19
+-}
+
+{-
+    Questão 20
+-}
