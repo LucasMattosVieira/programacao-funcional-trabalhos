@@ -93,6 +93,12 @@ distancias l = [ (sqrt(x^2 + y^2)) | (x,y) <- l ]
     Questão 7
 -}
 
+fatores :: Int -> [Int]
+fatores n = [k | k <- [1..n], mod n k == 0]
+
+primos :: Int -> Int -> [Int]
+primos x y = [ g | g <- [x..y], length (fatores g) == 2]
+
 {-
     Questão 8
 -}
