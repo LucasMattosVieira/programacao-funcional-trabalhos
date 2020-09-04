@@ -103,6 +103,17 @@ primos x y = [ g | g <- [x..y], length (fatores g) == 2]
     Questão 8
 -}
 
+mdc :: (Int,Int) -> Int
+mdc (m,n)
+     | n == 0 = m
+     | otherwise = mdc (n, mod m n)
+
+mmc2 :: Int -> Int -> Int
+mmc2 a b = div (a*b) (mdc(a,b))
+
+mmc :: Int -> Int -> Int -> Int
+mmc a b c = mmc2 (mmc2 a b) c
+
 {-
     Questão 9
 -}
