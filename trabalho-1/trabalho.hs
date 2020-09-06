@@ -118,6 +118,10 @@ mmc a b c = mmc2 (mmc2 a b) c
     Questão 9
 -}
 
+calcula_serie :: Float -> Int -> Float
+calcula_serie x 0 = 0
+calcula_serie x n = if even n then (x/fromIntegral n) + calcula_serie x (n - 1) else (fromIntegral n/x) + calcula_serie x (n - 1)
+
 {-
     Questão 10
 -}
