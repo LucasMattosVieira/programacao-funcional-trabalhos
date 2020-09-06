@@ -126,6 +126,14 @@ calcula_serie x n = if even n then (x/fromIntegral n) + calcula_serie x (n - 1) 
     Questão 10
 -}
 
+fizzbuzz :: Int -> [String]
+fizzbuzz 0 = []
+fizzbuzz n
+     | mod n 3 == 0 && mod n 5 == 0 = fizzbuzz (n-1) ++ ["FizzBuzz"]
+     | mod n 3 == 0 = fizzbuzz (n-1) ++ ["Fizz"]
+     | mod n 5 == 0 = fizzbuzz (n-1) ++ ["Buzz"]
+     | otherwise = fizzbuzz (n-1) ++ ["No"]
+
 {-
     Questão 11
 -}
